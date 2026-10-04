@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@mastra/core": "^1.74.0",
+    "@neon/config": "^1.8.3",
+    "@neon/env": "^1.5.0",
+    "@neondatabase/serverless": "^1.2.0",
+    "agentmail": "^0.5.35",
+    "dotenv": "^18.0.5",
+    "exa-js": "^2.25.0",
+    "zod": "^4.6.5"
+  }
+}

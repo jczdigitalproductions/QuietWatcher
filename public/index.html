@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7f4" />
+    <meta
+      name="description"
+      content="QuietWatcher quietly tracks the changes you care about."
+    />
+    <title>QuietWatcher — your quiet advantage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="QuietWatcher home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="13.2" stroke="currentColor" stroke-width="1.7" />
+              <circle cx="18" cy="18" r="6.2" stroke="currentColor" stroke-width="1.7" />
+              <path d="M18 2.8v5.1M18 28.1v5.1M2.8 18h5.1M28.1 18h5.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              <circle cx="18" cy="18" r="2" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-name">quiet<span>watcher</span></span>
+        </a>
+
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a class="nav-link is-active" href="#overview">
+            <span class="nav-icon" aria-hidden="true">◫</span>
+            Overview
+          </a>
+          <a class="nav-link" href="#watches">
+            <span class="nav-icon" aria-hidden="true">◎</span>
+            Your watches
+            <span class="nav-count" id="watch-nav-count">0</span>
+          </a>
+          <a class="nav-link" href="#activity">
+            <span class="nav-icon" aria-hidden="true">↗</span>
+            Activity
+          </a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="sidebar-card">
+          <div class="sidebar-card-art" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sidebar-card-title">The best things<br />happen quietly.</div>
+          <div class="sidebar-card-caption">We’ll only speak up when it matters.</div>
+        </div>
+
+        <div class="profile-row">
+          <div class="profile-avatar">Q</div>
+          <div class="profile-copy">
+            <strong>QuietWatcher</strong>
+            <span id="connection-label">Connecting…</span>
+          </div>
+          <span class="profile-menu" aria-hidden="true">···</span>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong>Overview</strong></div>
+          <div class="topbar-right">
+            <div class="connection-pill" id="mode-pill"><span class="status-dot"></span><span>Connecting</span></div>
+            <button class="avatar-button" type="button" aria-label="Account">Q</button>
+          </div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="welcome-row">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR PERSONAL RADAR</div>
+              <h1>Nothing to chase.<br /><span>Everything to know.</span></h1>
+              <p class="welcome-copy">Your world, watched quietly. We’ll let you know when something actually changes. Powered by Neon, Mastra, Exa &amp; AgentMail.</p>
+            </div>
+            <button class="button button-primary add-watch-button" id="add-watch-button" type="button">
+              <span class="plus-icon" aria-hidden="true">+</span>
+              Add a watch
+            </button>
+          </section>
+
+          <section class="workflow-card" aria-labelledby="workflow-title">
+            <div class="workflow-head">
+              <div>
+                <div class="section-kicker">ALWAYS ON, NEVER LOUD</div>
+                <h2 id="workflow-title">Your quiet workflow</h2>
+              </div>
+              <button class="button button-secondary" id="check-now-button" type="button">
+                <span class="refresh-icon" aria-hidden="true">↻</span>
+                Check now
+              </button>
+            </div>
+
+            <div class="workflow-track" id="workflow-track">
+              <article class="workflow-step" data-step="search">
+                <div class="step-icon step-exa"><span class="search-glyph" aria-hidden="true"></span></div>
+                <div class="step-copy">
+                  <span class="step-overline">01 · DISCOVER</span>
+                  <strong>Look across the web</strong>
+                  <span>Exa finds the latest source</span>
+                </div>
+                <span class="step-check" aria-hidden="true">✓</span>
+              </article>
+              <span class="workflow-connector" aria-hidden="true"><span></span></span>
+              <article class="workflow-step" data-step="compare">
+                <div class="step-icon step-neon"><span aria-hidden="true">◈</span></div>
+                <div class="step-copy">
+                  <span class="step-overline">02 · UNDERSTAND</span>
+                  <strong>Compare what matters</strong>
+                  <span>Neon remembers what changed</span>
+                </div>
+                <span class="step-check" aria-hidden="true">✓</span>
+              </article>
+              <span class="workflow-connector" aria-hidden="true"><span></span></span>
+              <article class="workflow-step" data-step="notify">
+                <div class="step-icon step-mail"><span aria-hidden="true">↗</span></div>
+                <div class="step-copy">
+                  <span class="step-overline">03 · ONLY IF NEEDED</span>
+                  <strong>Send one useful email</strong>
+                  <span>AgentMail includes the source</span>
+                </div>
+                <span class="step-check" aria-hidden="true">✓</span>
+              </article>
+            </div>
+            <div class="workflow-foot">
+              <span><span class="pulse-dot"></span> Mastra checks each watch on its own schedule</span>
+              <span class="workflow-run-status" id="workflow-run-status">Waiting quietly</span>
+            </div>
+          </section>
+
+          <section class="stats-grid" aria-label="Watch summary">
+            <article class="stat-card">
+              <div class="stat-label">KEEPING AN EYE ON</div>
+              <div class="stat-value"><span id="active-count">—</span><span class="stat-unit">watches</span></div>
+              <div class="stat-foot"><span class="tiny-indicator green"></span><span id="watch-stat-foot">Your personal radar</span></div>
+              <div class="stat-decoration rings" aria-hidden="true"></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-label">LAST CHECK</div>
+              <div class="stat-value stat-value-time" id="last-check">Just getting started</div>
+              <div class="stat-foot"><span class="tiny-indicator blue"></span><span id="last-check-foot">Mastra runs the workflow</span></div>
+              <div class="stat-decoration orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+            </article>
+            <article class="stat-card stat-card-quiet">
+              <div class="stat-label">NOISE FILTERED</div>
+              <div class="stat-value"><span id="quiet-count">0</span><span class="stat-unit">quiet checks</span></div>
+              <div class="stat-foot"><span class="tiny-indicator amber"></span><span>Only meaningful changes reach you</span></div>
+              <div class="stat-decoration wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+          </section>
+
+          <div class="content-columns">
+            <section class="panel watches-panel" id="watches" aria-labelledby="watches-title">
+              <div class="panel-heading">
+                <div>
+                  <div class="section-kicker">YOUR PERSONAL RADAR</div>
+                  <h2 id="watches-title">Your watches <span class="heading-count" id="watch-heading-count">0</span></h2>
+                </div>
+                <button class="text-button" id="see-all-watches" type="button">See all <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="watch-list" id="watch-list" aria-live="polite">
+                <div class="loading-row"><span class="loader"></span>Finding your watches…</div>
+              </div>
+              <button class="add-watch-row" id="add-watch-row" type="button"><span>+</span> Add something to watch</button>
+            </section>
+
+            <section class="panel activity-panel" id="activity" aria-labelledby="activity-title">
+              <div class="panel-heading">
+                <div>
+                  <div class="section-kicker">A LITTLE SOMETHING HAPPENED</div>
+                  <h2 id="activity-title">Recent activity</h2>
+                </div>
+                <span class="activity-live"><span class="pulse-dot"></span> LIVE</span>
+              </div>
+              <div class="activity-list" id="activity-list" aria-live="polite">
+                <div class="loading-row"><span class="loader"></span>Checking in…</div>
+              </div>
+              <div class="activity-footer"><span class="activity-footer-mark">✳</span> No noise. Just the signal.</div>
+            </section>
+          </div>
+
+          <footer class="page-footer">
+            <span>Quietly looking out for you.</span>
+            <span>Powered by <strong>Neon</strong>, <strong>Mastra</strong>, <strong>Exa</strong> &amp; <strong>AgentMail</strong></span>
+          </footer>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="watch-dialog" id="watch-dialog" aria-labelledby="dialog-title">
+      <form id="watch-form">
+        <div class="dialog-header">
+          <div>
+            <div class="section-kicker">A NEW THING TO KEEP IN MIND</div>
+            <h2 id="dialog-title">What should we watch?</h2>
+          </div>
+          <button class="dialog-close" id="dialog-close" type="button" aria-label="Close">×</button>
+        </div>
+        <label class="form-field">
+          <span>Give it a name</span>
+          <input name="name" required maxlength="120" placeholder="e.g. Headphones price" />
+        </label>
+        <label class="form-field">
+          <span>What kind of change?</span>
+          <select name="kind" id="watch-kind">
+            <option value="price_drop">A price drops</option>
+            <option value="ipo_pricing_window">An IPO pricing window opens</option>
+            <option value="clinical_trial_readout">Clinical trial results arrive</option>
+          </select>
+        </label>
+        <label class="form-field">
+          <span>What should we look for?</span>
+          <textarea name="query" required minlength="8" maxlength="1000" rows="3" placeholder="Be specific. Include product, company, trial, or other useful context."></textarea>
+          <small>We use this to search for the latest supporting source.</small>
+        </label>
+        <label class="form-field" id="target-price-field">
+          <span>Let me know at or below</span>
+          <div class="form-split">
+            <input name="targetPrice" type="number" min="0.01" step="0.01" placeholder="45.00" />
+            <select name="targetCurrency" aria-label="Target price currency">
+              <option value="USD">USD ($)</option>
+              <option value="CAD">CAD ($)</option>
+              <option value="EUR">EUR (€)</option>
+              <option value="GBP">GBP (£)</option>
+              <option value="AUD">AUD ($)</option>
+              <option value="JPY">JPY (¥)</option>
+            </select>
+          </div>
+        </label>
+        <label class="form-field hidden" id="alert-statuses-field">
+          <span>Statuses that should trigger an alert</span>
+          <input name="alertStatuses" placeholder="priced, announced" />
+          <small>Comma-separated, for example “priced” or “readout”.</small>
+        </label>
+        <div class="form-split">
+          <label class="form-field">
+            <span>Check every</span>
+            <select name="checkIntervalMinutes">
+              <option value="15">15 minutes</option>
+              <option value="60">1 hour</option>
+              <option value="360">6 hours</option>
+              <option value="1440">24 hours</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>Send the email to</span>
+            <input name="recipientEmail" type="email" required maxlength="254" placeholder="you@example.com" />
+          </label>
+        </div>
+        <div class="baseline-note"><span aria-hidden="true">✳</span> The first check quietly sets a baseline. We’ll email you when it changes.</div>
+        <p class="form-error hidden" id="form-error" role="alert"></p>
+        <div class="dialog-actions">
+          <button class="button button-secondary" id="cancel-watch" type="button">Maybe later</button>
+          <button class="button button-primary" type="submit"><span class="plus-icon">+</span> Start watching</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
