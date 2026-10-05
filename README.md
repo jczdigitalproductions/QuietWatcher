@@ -1,7 +1,11 @@
 # QuietWatcher
 ## Demo Video
 
-[![Watch the QuietWatcher demo](QuietWatcher_cover.png)](QuietWatcher_demo_narrated.mp4)
+[![Watch the QuietWatcher demo](QuietWatcher_cover.png)](
+
+https://github.com/user-attachments/assets/42c23e2f-acc8-45bc-9a43-3df3ba30a769
+
+)
 
 *Click the image to watch the narrated demo.*
 
