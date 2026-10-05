@@ -1,9 +1,9 @@
 # QuietWatcher
 ## Demo Video
-
+*Small demo video due to the file size limit of GitHub*
 [![Watch the QuietWatcher demo](QuietWatcher_cover.png)](https://github.com/user-attachments/assets/42c23e2f-acc8-45bc-9a43-3df3ba30a769)
 
-*Click the image to watch the narrated demo.*
+*Click the image below to watch the narrated demo on YouTube.*
 [![Watch the QuietWatcher demo](QuietWatcher_cover.png)](https://youtu.be/nks75ngRzF8)
 
 QuietWatcher checks things you care about on a schedule and emails you only when their meaningful state changes. Each alert includes the source link that supports the change. You never need to watch the dashboard. AgentEmail is the interface; the UI is for setup and debugging.
