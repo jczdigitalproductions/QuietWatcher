@@ -1,7 +1,7 @@
 # QuietWatcher
 ## Demo Video
 *Click the image below for a small demo video due to the file size limit of GitHub*
-[![Watch the QuietWatcher demo](<img src='QuietWatcher_cover.png' width='480')](https://github.com/user-attachments/assets/42c23e2f-acc8-45bc-9a43-3df3ba30a769)
+[![Watch the QuietWatcher demo](<QuietWatcher_cover.png')](https://github.com/user-attachments/assets/42c23e2f-acc8-45bc-9a43-3df3ba30a769)
 
 *Click the image below to watch the narrated demo on YouTube.*
 [![Watch the QuietWatcher demo](QuietWatcher_cover.png)](https://youtu.be/nks75ngRzF8)
